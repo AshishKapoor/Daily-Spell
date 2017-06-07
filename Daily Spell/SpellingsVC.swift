@@ -11,6 +11,7 @@ import UIKit
 class SpellingsVC: UIViewController {
 
     @IBOutlet weak var spellingLabel: UILabel!
+    
     var words: [Spellings] = []
     override func viewDidLoad() {
         super.viewDidLoad()
