@@ -12,22 +12,22 @@ class SpellingsVC: UIViewController {
 
     @IBOutlet weak var spellingLabel: UILabel!
     
-    var words: [Spellings] = []
+    var words: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        readLocallyStoredJsonFile()
+        loadJSONFile()
         title = "Daily Spell"
-        print(words.count)
         spellingLabel.text = "Delicious"
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.view.backgroundColor = UIColor.random()
+        
+        print(words)
     }
     
-    func readLocallyStoredJsonFile () {
+    func loadJSONFile () {
         if let path = Bundle.main.path(forResource: "spellings", ofType: "json") {
             do {
                 let jsonData = try NSData(contentsOfFile: path, options: NSData.ReadingOptions.mappedIfSafe)
@@ -35,7 +35,7 @@ class SpellingsVC: UIViewController {
                     let jsonResult: NSDictionary = try JSONSerialization.jsonObject(with: jsonData as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
                     if let spellings = jsonResult["spellings"] as? [String: Any] {
                         for spelling in spellings {
-                            Spellings(words: spelling.value as! String)
+                            words.append(spelling.value as! String)
                         }
                     }
                 } catch {}
