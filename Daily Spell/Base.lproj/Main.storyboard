@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Spellings-->
         <scene sceneID="ha4-r4-6Eg">
             <objects>
                 <collectionViewController storyboardIdentifier="SpellingsCollectionVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7Lv-id-zP6" customClass="SpellingsCollectionVC" customModule="Daily_Spell" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,21 +19,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7eg-Ez-baR">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="100" height="100"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="SpellingsCollectionVCell" reuseIdentifier="Cell" id="E13-tb-uTq" customClass="SpellingsCollectionVCell" customModule="Daily_Spell" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="SpellingsCollectionVCell" reuseIdentifier="SpellMenuCell" id="E13-tb-uTq" customClass="SpellingsCollectionVCell" customModule="Daily_Spell" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uu3-rB-s47">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gx3-o7-sno">
+                                            <rect key="frame" x="29" y="40" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="uu3-rB-s47" firstAttribute="leading" secondItem="E13-tb-uTq" secondAttribute="leading" id="1bQ-ha-bc3"/>
+                                    <constraint firstAttribute="bottom" secondItem="uu3-rB-s47" secondAttribute="bottom" id="2lU-fb-558"/>
+                                    <constraint firstItem="gx3-o7-sno" firstAttribute="centerY" secondItem="uu3-rB-s47" secondAttribute="centerY" id="AsH-md-WfU"/>
+                                    <constraint firstItem="gx3-o7-sno" firstAttribute="centerX" secondItem="uu3-rB-s47" secondAttribute="centerX" id="Riu-1h-KhG"/>
+                                    <constraint firstAttribute="trailing" secondItem="uu3-rB-s47" secondAttribute="trailing" id="yWb-sm-p0r"/>
+                                    <constraint firstItem="uu3-rB-s47" firstAttribute="top" secondItem="E13-tb-uTq" secondAttribute="top" id="zIk-E3-nGH"/>
+                                </constraints>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="LVM-NK-pmW"/>
+                                    <outlet property="spellingLevelImage" destination="uu3-rB-s47" id="6ve-bS-FzD"/>
+                                    <outlet property="spellingLevelLabel" destination="gx3-o7-sno" id="mgw-WF-wW6"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -42,16 +62,16 @@
                             <outlet property="delegate" destination="7Lv-id-zP6" id="ma5-g9-btF"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Item" id="Irz-NJ-KSo"/>
+                    <tabBarItem key="tabBarItem" title="Spellings" image="icons8-saving_book" id="Irz-NJ-KSo"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="woL-xB-Rby" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="354" y="139"/>
+            <point key="canvasLocation" x="352.80000000000001" y="138.98050974512745"/>
         </scene>
         <!--Developers-->
         <scene sceneID="Xub-gf-ROj">
             <objects>
-                <viewController title="Developers" id="LUV-sS-JmL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutUsVC" title="Developers" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LUV-sS-JmL" customClass="AboutUsVC" customModule="Daily_Spell" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Hh-Bc-eGU"/>
                         <viewControllerLayoutGuide type="bottom" id="ldx-Q7-7n7"/>
@@ -61,7 +81,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="6NP-2G-sV6"/>
+                    <tabBarItem key="tabBarItem" title="About Us" image="icons8-conference_background_selected_filled" id="6NP-2G-sV6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rrn-Z5-Tmd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -86,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="-434" y="429"/>
         </scene>
-        <!--Item-->
+        <!--SpellingsVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SpellingsVC" customModule="Daily_Spell" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SpellingsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="SpellingsVC" customModule="Daily_Spell" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -116,7 +136,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHv-tM-zbr">
-                                <rect key="frame" x="16" y="72" width="343" height="21"/>
+                                <rect key="frame" x="16" y="28" width="343" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="cMm-Ge-i4H"/>
                                 </constraints>
@@ -125,7 +145,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="work" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilP-ak-RXm">
-                                <rect key="frame" x="16" y="101" width="343" height="35"/>
+                                <rect key="frame" x="16" y="57" width="343" height="123"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -147,7 +167,7 @@
                             <constraint firstItem="r47-4e-Cae" firstAttribute="baseline" secondItem="Y6M-L5-7I1" secondAttribute="baseline" id="z7B-WF-NnA"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="gIf-I4-MLC"/>
+                    <tabBarItem key="tabBarItem" title="" id="gIf-I4-MLC"/>
                     <navigationItem key="navigationItem" id="fQd-YB-xKF"/>
                     <connections>
                         <outlet property="spellingLabel" destination="ilP-ak-RXm" id="53q-aE-QnR"/>
@@ -181,4 +201,8 @@
             <point key="canvasLocation" x="-1194" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-conference_background_selected_filled" width="25" height="25"/>
+        <image name="icons8-saving_book" width="25" height="25"/>
+    </resources>
 </document>

@@ -10,4 +10,12 @@ import UIKit
 
 class SpellingsCollectionVCell: UICollectionViewCell {
     
+    @IBOutlet weak var spellingLevelImage: UIImageView!
+    @IBOutlet weak var spellingLevelLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        spellingLevelImage.image = UIImage(named: "icons8-lock")
+        spellingLevelLabel.text = "Testing..."
+    }
 }
