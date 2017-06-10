@@ -19,6 +19,7 @@
 		E3BFE59B1EE840F9006801AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3BFE5991EE840F9006801AD /* LaunchScreen.storyboard */; };
 		E3BFE5A31EE849A7006801AD /* spellings.json in Resources */ = {isa = PBXBuildFile; fileRef = E3BFE5A21EE849A7006801AD /* spellings.json */; };
 		E3BFE5A51EE84E04006801AD /* Spellings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BFE5A41EE84E04006801AD /* Spellings.swift */; };
+		F3F057E5FF57262D82F8F044 /* Pods_Daily_Spell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96BBF89A25566F48FE6D843E /* Pods_Daily_Spell.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,8 @@
 		894969EA1EEA65B100D19112 /* AboutUsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsVC.swift; sourceTree = "<group>"; };
 		894969EE1EEA7CB100D19112 /* SpellingsLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpellingsLevel.swift; sourceTree = "<group>"; };
 		894969F01EEA7D6000D19112 /* SpellingConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpellingConstants.swift; sourceTree = "<group>"; };
+		96BBF89A25566F48FE6D843E /* Pods_Daily_Spell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Daily_Spell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE229DCFA631659E2C131F6D /* Pods-Daily Spell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Spell.release.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Spell/Pods-Daily Spell.release.xcconfig"; sourceTree = "<group>"; };
 		E3BFE58D1EE840F9006801AD /* Daily Spell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Spell.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3BFE5901EE840F9006801AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3BFE5921EE840F9006801AD /* SpellingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellingsVC.swift; sourceTree = "<group>"; };
@@ -36,6 +39,7 @@
 		E3BFE59C1EE840F9006801AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3BFE5A21EE849A7006801AD /* spellings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = spellings.json; sourceTree = "<group>"; };
 		E3BFE5A41EE84E04006801AD /* Spellings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spellings.swift; sourceTree = "<group>"; };
+		F812D4EBDEB575FD944B84C7 /* Pods-Daily Spell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Spell.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Spell/Pods-Daily Spell.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,12 +47,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3F057E5FF57262D82F8F044 /* Pods_Daily_Spell.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0793695F8D3AF237B7A9CFA8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F812D4EBDEB575FD944B84C7 /* Pods-Daily Spell.debug.xcconfig */,
+				DE229DCFA631659E2C131F6D /* Pods-Daily Spell.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2281D4E8D5B6913548FCAEEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96BBF89A25566F48FE6D843E /* Pods_Daily_Spell.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		894969E71EEA63A500D19112 /* Spellings */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +103,8 @@
 			children = (
 				E3BFE58F1EE840F9006801AD /* Daily Spell */,
 				E3BFE58E1EE840F9006801AD /* Products */,
+				0793695F8D3AF237B7A9CFA8 /* Pods */,
+				2281D4E8D5B6913548FCAEEE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,9 +140,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E3BFE59F1EE840F9006801AD /* Build configuration list for PBXNativeTarget "Daily Spell" */;
 			buildPhases = (
+				BAF2C8AFF631653F6662544B /* [CP] Check Pods Manifest.lock */,
 				E3BFE5891EE840F9006801AD /* Sources */,
 				E3BFE58A1EE840F9006801AD /* Frameworks */,
 				E3BFE58B1EE840F9006801AD /* Resources */,
+				FBB3A7484D5A765BCD6C509C /* [CP] Embed Pods Frameworks */,
+				FA5D4D37C904BF930F8CC9A5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -178,6 +205,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BAF2C8AFF631653F6662544B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FA5D4D37C904BF930F8CC9A5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Daily Spell/Pods-Daily Spell-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBB3A7484D5A765BCD6C509C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Daily Spell/Pods-Daily Spell-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E3BFE5891EE840F9006801AD /* Sources */ = {
@@ -326,6 +401,7 @@
 		};
 		E3BFE5A01EE840F9006801AD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F812D4EBDEB575FD944B84C7 /* Pods-Daily Spell.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8NCFKTPQVR;
@@ -340,6 +416,7 @@
 		};
 		E3BFE5A11EE840F9006801AD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE229DCFA631659E2C131F6D /* Pods-Daily Spell.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8NCFKTPQVR;

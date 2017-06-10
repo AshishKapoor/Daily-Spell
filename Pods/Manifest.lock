@@ -1,0 +1,15 @@
+PODS:
+  - DMSwipeCards (1.0.3)
+  - Kingfisher (3.10.1)
+
+DEPENDENCIES:
+  - DMSwipeCards
+  - Kingfisher
+
+SPEC CHECKSUMS:
+  DMSwipeCards: 0f2488120c13eb73366f01e87d1423495cde8ed4
+  Kingfisher: 33a1b82140fcb14a9fc13f78dfde2a03ff8de8cb
+
+PODFILE CHECKSUM: 02018dd67937503120da4b1ffc7486734d4556f5
+
+COCOAPODS: 1.2.1

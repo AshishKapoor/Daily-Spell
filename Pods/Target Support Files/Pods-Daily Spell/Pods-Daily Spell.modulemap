@@ -1,0 +1,6 @@
+framework module Pods_Daily_Spell {
+  umbrella header "Pods-Daily Spell-umbrella.h"
+
+  export *
+  module * { export * }
+}
