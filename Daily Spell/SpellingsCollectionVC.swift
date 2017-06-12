@@ -26,6 +26,7 @@ class SpellingsCollectionVC: UICollectionViewController {
     
     func configureCollectionView () {
         loadJSONFile()
+        
         self.collectionView?.autoresizesSubviews            = true
         self.collectionView?.showsVerticalScrollIndicator   = false
         self.clearsSelectionOnViewWillAppear                = false
