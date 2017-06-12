@@ -10,7 +10,12 @@ import Foundation
 
 class Spellings: NSObject {
     
-    private var _spellings: [String] = []
+    private var _spellings: [JSONDictionary]    = []
+    
+    private var _word: [String]         = []
+    private var _meaning: [String]      = []
+    private var _imageURL: [String]     = []
+    private var _summary: [String]      = []
     
     // Init with spells
     init (spells: NSDictionary) {
@@ -19,9 +24,26 @@ class Spellings: NSObject {
             print("can't consume words from spellings json")
             return
         }
-        for spelling in words {
-            self._spellings.append((spelling.value as? String)!)
+        
+        for (_, value) in words {
+            self._spellings.append((value as? JSONDictionary)!)
         }
+        
+        for spelling in self._spellings {
+            guard let summary = spelling["summary"] as? String else { return }
+            _summary.append(summary)
+            
+            guard let word = spelling["word"] as? String else { return }
+            _word.append(word)
+            
+            guard let imageURL = spelling["image"] as? String else { return }
+            _imageURL.append(imageURL)
+            
+            guard let meaning = spelling["meaning"] as? String else { return }
+            _meaning.append(meaning)
+        }
+
+        
     }
     
     // Empty init
@@ -29,8 +51,20 @@ class Spellings: NSObject {
     }
     
     // Getters
-    var spellings: [String] {
-        return _spellings
+    var word: [String] {
+        return _word
+    }
+    
+    var summary: [String] {
+        return _summary
+    }
+    
+    var imageURL: [String] {
+        return _imageURL
+    }
+    
+    var meaning: [String] {
+        return _meaning
     }
     
 }

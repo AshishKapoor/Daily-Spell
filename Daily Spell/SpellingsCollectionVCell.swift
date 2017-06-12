@@ -15,7 +15,13 @@ class SpellingsCollectionVCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        spellingLevelImage.image = UIImage(named: "icons8-lock")
-        spellingLevelLabel.text = "Testing..."
+        
+        spellingLevelLabel.text = "Loading..."
+        
+        spellingLevelImage.backgroundColor      = UIColor.random()
+        spellingLevelImage.layer.cornerRadius   = 72.00
+        spellingLevelLabel.textColor            = UIColor.white
+        spellingLevelLabel.font                 = UIFont.systemFont(ofSize: 20, weight: UIFontWeightBold)
+        
     }
 }
