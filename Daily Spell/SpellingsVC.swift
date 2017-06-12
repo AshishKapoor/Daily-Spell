@@ -10,39 +10,16 @@ import UIKit
 
 class SpellingsVC: UIViewController {
 
-    @IBOutlet weak var spellingLabel: UILabel!
-    
-    var words: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        loadJSONFile()
         title = "Daily Spell"
-        spellingLabel.text = "Delicious"
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.view.backgroundColor = UIColor.random()
-        
-        print(words)
     }
-    
-    func loadJSONFile () {
-        if let path = Bundle.main.path(forResource: "spellings", ofType: "json") {
-            do {
-                let jsonData = try NSData(contentsOfFile: path, options: NSData.ReadingOptions.mappedIfSafe)
-                do {
-                    let jsonResult: NSDictionary = try JSONSerialization.jsonObject(with: jsonData as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
-                    if let spellings = jsonResult["spellings"] as? [String: Any] {
-                        for spelling in spellings {
-                            words.append(spelling.value as! String)
-                        }
-                    }
-                } catch {}
-            } catch {}
-        }
-    }
-    
 }
 
 

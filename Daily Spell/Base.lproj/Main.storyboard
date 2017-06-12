@@ -14,7 +14,7 @@
         <scene sceneID="ha4-r4-6Eg">
             <objects>
                 <collectionViewController storyboardIdentifier="SpellingsCollectionVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7Lv-id-zP6" customClass="SpellingsCollectionVC" customModule="Daily_Spell" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="MVf-06-dCj">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="MVf-06-dCj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -35,9 +35,9 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uu3-rB-s47">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gx3-o7-sno">
-                                            <rect key="frame" x="29" y="40" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gx3-o7-sno">
+                                            <rect key="frame" x="30.5" y="41" width="39.5" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -85,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rrn-Z5-Tmd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="354" y="909"/>
+            <point key="canvasLocation" x="353" y="827"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vOA-se-egH">
@@ -118,23 +118,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r47-4e-Cae">
-                                <rect key="frame" x="16" y="521" width="150" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="myZ-GI-A3E"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="16"/>
-                                <state key="normal" title="Previous">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6M-L5-7I1">
-                                <rect key="frame" x="209" y="521" width="150" height="31"/>
-                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="16"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHv-tM-zbr">
                                 <rect key="frame" x="16" y="28" width="343" height="21"/>
                                 <constraints>
@@ -144,38 +127,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="work" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilP-ak-RXm">
-                                <rect key="frame" x="16" y="57" width="343" height="123"/>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="r47-4e-Cae" secondAttribute="bottom" constant="115" id="BxU-zD-mdx"/>
-                            <constraint firstItem="ilP-ak-RXm" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="FDj-3f-Dbq"/>
-                            <constraint firstItem="ilP-ak-RXm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HpT-db-uk1"/>
-                            <constraint firstItem="ilP-ak-RXm" firstAttribute="trailing" secondItem="Y6M-L5-7I1" secondAttribute="trailing" id="JKu-2Y-aLK"/>
-                            <constraint firstItem="ilP-ak-RXm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-215" id="Wd2-jY-TM4"/>
-                            <constraint firstItem="ilP-ak-RXm" firstAttribute="leading" secondItem="r47-4e-Cae" secondAttribute="leading" id="YuK-R0-RnQ"/>
-                            <constraint firstItem="Y6M-L5-7I1" firstAttribute="leading" secondItem="r47-4e-Cae" secondAttribute="trailing" constant="43" id="gh9-WW-ceV"/>
-                            <constraint firstItem="SHv-tM-zbr" firstAttribute="trailing" secondItem="ilP-ak-RXm" secondAttribute="trailing" id="mrS-8i-EXd"/>
+                            <constraint firstItem="SHv-tM-zbr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="V6o-oB-W9t"/>
                             <constraint firstItem="SHv-tM-zbr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="p7D-ov-WmH"/>
-                            <constraint firstItem="ilP-ak-RXm" firstAttribute="top" secondItem="SHv-tM-zbr" secondAttribute="bottom" constant="8" symbolic="YES" id="sLM-kc-b5A"/>
-                            <constraint firstItem="SHv-tM-zbr" firstAttribute="leading" secondItem="ilP-ak-RXm" secondAttribute="leading" id="une-G5-kub"/>
-                            <constraint firstItem="r47-4e-Cae" firstAttribute="baseline" secondItem="Y6M-L5-7I1" secondAttribute="baseline" id="z7B-WF-NnA"/>
+                            <constraint firstItem="SHv-tM-zbr" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xqy-p5-OQJ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="gIf-I4-MLC"/>
                     <navigationItem key="navigationItem" id="fQd-YB-xKF"/>
-                    <connections>
-                        <outlet property="spellingLabel" destination="ilP-ak-RXm" id="53q-aE-QnR"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1190" y="139"/>
+            <point key="canvasLocation" x="1094" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="91g-Hm-dCn">
