@@ -76,6 +76,7 @@ class SpellingsVC: UIViewController {
     func buttonTapped() {
         swipeView.addCards(["\(self.summaryDetail!)", "\(self.meaningDetail!)", "\(self.imageURLDetail!)"])
     }
+    
 }
 
 extension SpellingsVC: DMSwipeCardsViewDelegate {

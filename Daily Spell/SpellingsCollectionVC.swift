@@ -31,6 +31,12 @@ class SpellingsCollectionVC: UICollectionViewController {
         self.clearsSelectionOnViewWillAppear                = false
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.collectionView?.decelerationRate = UIScrollViewDecelerationRateFast
+        self.collectionView?.allowsMultipleSelection = false
+    }
+    
     func loadJSONFile () {
         if let path = Bundle.main.path(forResource: "spellings", ofType: "json") {
             do {
@@ -80,28 +86,22 @@ class SpellingsCollectionVC: UICollectionViewController {
     }
 
     // MARK: UICollectionViewDataSource
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return self.words.word.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? SpellingsCollectionVCell else {
-            return UICollectionViewCell()
-        }
-        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? SpellingsCollectionVCell else { return UICollectionViewCell() }
         // Configure the cell
         cell.spellingLevelLabel.text            = self.words.word[indexPath.item]
-        
         return cell
     }
-
+    
     // MARK: UICollectionViewDelegate
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
         return true

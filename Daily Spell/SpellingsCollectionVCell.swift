@@ -21,7 +21,7 @@ class SpellingsCollectionVCell: UICollectionViewCell {
         spellingLevelImage.backgroundColor      = UIColor.random()
         spellingLevelImage.layer.cornerRadius   = 72.00
         spellingLevelLabel.textColor            = UIColor.white
-        spellingLevelLabel.font                 = UIFont.systemFont(ofSize: 20, weight: UIFontWeightBold)
+        spellingLevelLabel.font                 = UIFont.systemFont(ofSize: 18, weight: UIFontWeightBold)
         
     }
 }
