@@ -122,6 +122,7 @@ class SpellingsCollectionVC: UICollectionViewController {
         
         self.navigationController?.pushViewController(detailSpellingsViewController, animated:true)
     }
+
 }
 
 extension SpellingsCollectionVC: UICollectionViewDelegateFlowLayout {

@@ -26,6 +26,8 @@ class SpellingsVC: UIViewController {
         setupView()
         setupCardsView()
         
+        let value = UIInterfaceOrientation.portrait.rawValue
+        UIDevice.current.setValue(value, forKey: "orientation")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,23 +37,33 @@ class SpellingsVC: UIViewController {
     func setupView () {
         title = self.wordDetail
         self.navigationController?.navigationBar.tintColor = UIColor.black
-        self.view.backgroundColor = UIColor(white: 0.95, alpha: 1.0)
+        self.view.backgroundColor = UIColor.random()
+        
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.addSubview(blurEffectView)
     }
     
     func setupCardsView () {
         
         let viewGenerator: (String, CGRect) -> (UIView) = { (element: String, frame: CGRect) -> (UIView) in
+            
             let container = UIView(frame: CGRect(x: 30, y: 20, width: frame.width - 60, height: frame.height - 40))
 
             let summaryLabel = UILabel(frame: container.bounds)
             summaryLabel.text = element
             summaryLabel.textAlignment = .center
             summaryLabel.backgroundColor = UIColor.white
-            summaryLabel.font = UIFont.systemFont(ofSize: 13, weight: UIFontWeightThin)
+            summaryLabel.font = UIFont.systemFont(ofSize: 16, weight: UIFontWeightBold)
+            summaryLabel.numberOfLines = 20
             summaryLabel.clipsToBounds = true
             summaryLabel.layer.cornerRadius = 16
+            
             container.addSubview(summaryLabel)
             
+            // container.backgroundColor = UIColor.random()
             container.layer.shadowRadius = 4
             container.layer.shadowOpacity = 1.0
             container.layer.shadowColor = UIColor(white: 0.9, alpha: 1.0).cgColor
@@ -116,5 +128,18 @@ extension CGFloat {
 extension UIColor {
     static func random() -> UIColor {
         return UIColor(red:   .random(), green: .random(), blue:  .random(), alpha: 1.0)
+    }
+}
+
+extension UIImageView
+{
+    func addBlurEffect()
+    {
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.bounds
+        
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // for supporting device rotation
+        self.addSubview(blurEffectView)
     }
 }
