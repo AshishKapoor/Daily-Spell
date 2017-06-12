@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -63,29 +62,18 @@
                         </connections>
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Spellings" image="icons8-saving_book" id="Irz-NJ-KSo"/>
+                    <navigationItem key="navigationItem" id="Yac-5Q-fXd">
+                        <barButtonItem key="rightBarButtonItem" image="icons8-about" id="Xyc-ov-KM5">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="contactUsButtonPress:" destination="7Lv-id-zP6" id="HUw-ey-kgY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="woL-xB-Rby" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="352.80000000000001" y="138.98050974512745"/>
-        </scene>
-        <!--About Us-->
-        <scene sceneID="Xub-gf-ROj">
-            <objects>
-                <viewController storyboardIdentifier="AboutUsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LUV-sS-JmL" customClass="AboutUsVC" customModule="Daily_Spell" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3Hh-Bc-eGU"/>
-                        <viewControllerLayoutGuide type="bottom" id="ldx-Q7-7n7"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8wR-dg-jiR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="About Us" image="icons8-conference_background_selected_filled" id="6NP-2G-sV6"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rrn-Z5-Tmd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="353" y="827"/>
+            <point key="canvasLocation" x="-455" y="429"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="x90-sY-9aQ">
@@ -96,31 +84,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="ZjC-QZ-zxh" kind="relationship" relationship="rootViewController" id="qPx-UY-L2n"/>
+                        <segue destination="7Lv-id-zP6" kind="relationship" relationship="rootViewController" id="xok-Kb-kVj"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UWN-0b-z7L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1265" y="429"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="vOA-se-egH">
-            <objects>
-                <tabBarController id="ZjC-QZ-zxh" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="BhF-Oi-2Mp"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="5j0-ib-IlB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="7Lv-id-zP6" kind="relationship" relationship="viewControllers" id="CDk-xf-eVU"/>
-                        <segue destination="LUV-sS-JmL" kind="relationship" relationship="viewControllers" id="1kr-v4-LfI"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jxa-Fj-r5j" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-434" y="429"/>
         </scene>
         <!--SpellingsVC-->
         <scene sceneID="tne-QT-ifu">
@@ -133,34 +102,18 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHv-tM-zbr">
-                                <rect key="frame" x="16" y="28" width="343" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="cMm-Ge-i4H"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="SHv-tM-zbr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="V6o-oB-W9t"/>
-                            <constraint firstItem="SHv-tM-zbr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="p7D-ov-WmH"/>
-                            <constraint firstItem="SHv-tM-zbr" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xqy-p5-OQJ"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="gIf-I4-MLC"/>
                     <navigationItem key="navigationItem" id="fQd-YB-xKF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1094" y="139"/>
+            <point key="canvasLocation" x="352.80000000000001" y="428.63568215892059"/>
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-conference_background_selected_filled" width="25" height="25"/>
+        <image name="icons8-about" width="25" height="25"/>
         <image name="icons8-saving_book" width="25" height="25"/>
     </resources>
 </document>

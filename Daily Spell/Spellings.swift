@@ -19,7 +19,7 @@ class Spellings: NSObject {
     
     // Init with spells
     init (spells: NSDictionary) {
-        
+        super.init()
         guard let words = spells["spellings"] as? [String: Any] else {
             print("can't consume words from spellings json")
             return
@@ -48,6 +48,7 @@ class Spellings: NSObject {
     
     // Empty init
     override init() {
+    
     }
     
     // Getters

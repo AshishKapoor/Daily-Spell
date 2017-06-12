@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		894969E41EEA632500D19112 /* SpellingsCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894969E31EEA632500D19112 /* SpellingsCollectionVC.swift */; };
 		894969E61EEA637300D19112 /* SpellingsCollectionVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894969E51EEA637300D19112 /* SpellingsCollectionVCell.swift */; };
-		894969EB1EEA65B100D19112 /* AboutUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894969EA1EEA65B100D19112 /* AboutUsVC.swift */; };
 		894969EF1EEA7CB100D19112 /* SpellingsLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894969EE1EEA7CB100D19112 /* SpellingsLevel.swift */; };
 		894969F11EEA7D6000D19112 /* SpellingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894969F01EEA7D6000D19112 /* SpellingConstants.swift */; };
 		E3BFE5911EE840F9006801AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BFE5901EE840F9006801AD /* AppDelegate.swift */; };
@@ -25,7 +24,6 @@
 /* Begin PBXFileReference section */
 		894969E31EEA632500D19112 /* SpellingsCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpellingsCollectionVC.swift; sourceTree = "<group>"; };
 		894969E51EEA637300D19112 /* SpellingsCollectionVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpellingsCollectionVCell.swift; sourceTree = "<group>"; };
-		894969EA1EEA65B100D19112 /* AboutUsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsVC.swift; sourceTree = "<group>"; };
 		894969EE1EEA7CB100D19112 /* SpellingsLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpellingsLevel.swift; sourceTree = "<group>"; };
 		894969F01EEA7D6000D19112 /* SpellingConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpellingConstants.swift; sourceTree = "<group>"; };
 		96BBF89A25566F48FE6D843E /* Pods_Daily_Spell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Daily_Spell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,14 +88,6 @@
 			name = Menu;
 			sourceTree = "<group>";
 		};
-		894969E91EEA659100D19112 /* About Us */ = {
-			isa = PBXGroup;
-			children = (
-				894969EA1EEA65B100D19112 /* AboutUsVC.swift */,
-			);
-			name = "About Us";
-			sourceTree = "<group>";
-		};
 		E3BFE5841EE840F9006801AD = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +114,6 @@
 				E3BFE5941EE840F9006801AD /* Main.storyboard */,
 				894969E71EEA63A500D19112 /* Spellings */,
 				894969E81EEA63B100D19112 /* Menu */,
-				894969E91EEA659100D19112 /* About Us */,
 				E3BFE5971EE840F9006801AD /* Assets.xcassets */,
 				E3BFE5991EE840F9006801AD /* LaunchScreen.storyboard */,
 				E3BFE59C1EE840F9006801AD /* Info.plist */,
@@ -265,7 +254,6 @@
 				E3BFE5931EE840F9006801AD /* SpellingsVC.swift in Sources */,
 				894969E61EEA637300D19112 /* SpellingsCollectionVCell.swift in Sources */,
 				894969F11EEA7D6000D19112 /* SpellingConstants.swift in Sources */,
-				894969EB1EEA65B100D19112 /* AboutUsVC.swift in Sources */,
 				E3BFE5911EE840F9006801AD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

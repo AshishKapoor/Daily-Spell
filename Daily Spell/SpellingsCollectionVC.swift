@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RFAboutView_Swift
 
 private let reuseIdentifier = "SpellMenuCell"
 
@@ -47,7 +48,36 @@ class SpellingsCollectionVC: UICollectionViewController {
             }
         }
     }
-
+    
+    @IBAction func contactUsButtonPress(_ sender: Any) {
+        self.view.backgroundColor = UIColor(white: 0.95, alpha: 1.0)
+        
+        // First create a UINavigationController (or use your existing one).
+        // The RFAboutView needs to be wrapped in a UINavigationController.
+        
+        let aboutNav = UINavigationController()
+        
+        // Initialise the RFAboutView:
+        let aboutView = RFAboutViewController(copyrightHolderName: "Ashish Kapoor", contactEmail: "swiftobjc@gmail.com", contactEmailTitle: "Contact me", websiteURL: NSURL(string: "https://ashishkapoor.github.io")! as URL, websiteURLTitle: "Website")
+        
+        // Set some additional options:
+        aboutView.headerBackgroundColor = .black
+        aboutView.headerTextColor = .white
+        aboutView.blurStyle = .dark
+        //        aboutView.headerBackgroundImage = UIImage(named: "about_header_bg.jpg")
+        
+        // Add an additional button:
+        aboutView.addAdditionalButton("Privacy Policy", content: "Here's the privacy policy")
+        
+        // Add an acknowledgement:
+        aboutView.addAcknowledgement("An awesome library", content: "License information for the awesome library")
+        
+        // Add the aboutView to the NavigationController:
+        aboutNav.setViewControllers([aboutView], animated: false)
+        
+        // Present the navigation controller:
+        self.present(aboutNav, animated: true, completion: nil)
+    }
 
     // MARK: UICollectionViewDataSource
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -82,13 +112,15 @@ class SpellingsCollectionVC: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "SpellingsVC") as? SpellingsVC
-            else {
-            print("Could not instantiate view controller with identifier of type SpellingsVC")
-            return
-        }
-        // vc.resultsArray = self.resultsArray // Data to be transfered.
-        self.navigationController?.pushViewController(vc, animated:true)
+        guard let detailSpellingsViewController = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "SpellingsVC") as? SpellingsVC
+            else { print("Could not instantiate view controller with identifier of type SpellingsVC"); return }
+        
+        detailSpellingsViewController.meaningDetail     = self.words.meaning[indexPath.item]
+        detailSpellingsViewController.summaryDetail     = self.words.summary[indexPath.item]
+        detailSpellingsViewController.imageURLDetail    = self.words.imageURL[indexPath.item]
+        detailSpellingsViewController.wordDetail        = self.words.word[indexPath.item]
+        
+        self.navigationController?.pushViewController(detailSpellingsViewController, animated:true)
     }
 }
 
@@ -110,7 +142,7 @@ extension SpellingsCollectionVC: UICollectionViewDelegateFlowLayout {
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        return CGSize(width: 50, height: 50)
+        return CGSize(width: 10, height: 10)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

@@ -9,12 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Kingfisher.xcscheme</key>
+		<key>Pods-Daily Spell.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Daily Spell.xcscheme</key>
+		<key>RFAboutView-Swift-RFAboutView_Swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RFAboutView-Swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,12 +27,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2F0C0F810568D3E82219429D9D870F04</key>
+		<key>404382A6CE74395F84B96F8FA5F541B1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>551B713B343D485CA12F6320C6D5FB66</key>
+		<key>5F735E9BF1F64BE12CC62D5A1665569A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EF6E2B4DEDE3E8253CDF5EE10E123324</key>
 		<dict>
 			<key>primary</key>
 			<true/>

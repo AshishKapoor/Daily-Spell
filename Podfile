@@ -6,6 +6,6 @@ target 'Daily Spell' do
   use_frameworks!
 
   # Pods for Daily Spell
-  pod 'Kingfisher'
   pod 'DMSwipeCards'
+  pod 'RFAboutView-Swift', '~> 2.0.1'
 end
