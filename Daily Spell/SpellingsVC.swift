@@ -42,14 +42,15 @@ class SpellingsVC: UIViewController {
         
         let viewGenerator: (String, CGRect) -> (UIView) = { (element: String, frame: CGRect) -> (UIView) in
             let container = UIView(frame: CGRect(x: 30, y: 20, width: frame.width - 60, height: frame.height - 40))
-            let label = UILabel(frame: container.bounds)
-            label.text = self.meaningDetail
-            label.textAlignment = .center
-            label.backgroundColor = UIColor.white
-            label.font = UIFont.systemFont(ofSize: 13, weight: UIFontWeightThin)
-            label.clipsToBounds = true
-            label.layer.cornerRadius = 16
-            container.addSubview(label)
+
+            let summaryLabel = UILabel(frame: container.bounds)
+            summaryLabel.text = element
+            summaryLabel.textAlignment = .center
+            summaryLabel.backgroundColor = UIColor.white
+            summaryLabel.font = UIFont.systemFont(ofSize: 13, weight: UIFontWeightThin)
+            summaryLabel.clipsToBounds = true
+            summaryLabel.layer.cornerRadius = 16
+            container.addSubview(summaryLabel)
             
             container.layer.shadowRadius = 4
             container.layer.shadowOpacity = 1.0
@@ -57,20 +58,23 @@ class SpellingsVC: UIViewController {
             container.layer.shadowOffset = CGSize(width: 0, height: 0)
             container.layer.shouldRasterize = true
             container.layer.rasterizationScale = UIScreen.main.scale
+
             return container
         }
         
         let frame = CGRect(x: 0, y: 80, width: self.view.frame.width, height: self.view.frame.height - 160)
+        
         swipeView = DMSwipeCardsView<String>(frame: frame, viewGenerator: viewGenerator, overlayGenerator: nil)
+        
         swipeView.delegate = self
+        
         self.view.addSubview(swipeView)
         
         buttonTapped()
     }
     
     func buttonTapped() {
-        self.swipeView.addCards((self.count...(self.count+2)).map({"\($0)"}), onTop: true)
-        self.count = self.count + 2
+        swipeView.addCards(["\(self.summaryDetail!)", "\(self.meaningDetail!)", "\(self.imageURLDetail!)"])
     }
 }
 
@@ -100,24 +104,6 @@ extension CGFloat {
 
 extension UIColor {
     static func random() -> UIColor {
-        return UIColor(red:   .random(),
-                       green: .random(),
-                       blue:  .random(),
-                       alpha: 1.0)
+        return UIColor(red:   .random(), green: .random(), blue:  .random(), alpha: 1.0)
     }
 }
-
-
-
-//        let overlayGenerator: (SwipeMode, CGRect) -> (UIView) = { (mode: SwipeMode, frame: CGRect) -> (UIView) in
-//            let label = UILabel()
-//            label.frame.size = CGSize(width: 100, height: 100)
-//            label.center = CGPoint(x: frame.width / 2, y: frame.height / 2)
-//            label.layer.cornerRadius = label.frame.width / 2
-//            label.backgroundColor = mode == .left ? UIColor.red : UIColor.green
-//            label.text = mode == .left ? "👍" : "👎"
-//            label.clipsToBounds = true
-//            label.font = UIFont.systemFont(ofSize: 24)
-//            label.textAlignment = .center
-//            return label
-//        }

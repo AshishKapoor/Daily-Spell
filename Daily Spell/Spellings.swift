@@ -43,7 +43,6 @@ class Spellings: NSObject {
             _meaning.append(meaning)
         }
 
-        
     }
     
     // Empty init
