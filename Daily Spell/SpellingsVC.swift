@@ -92,6 +92,16 @@ extension SpellingsVC: DMSwipeCardsViewDelegate {
     }
     
     func reachedEndOfStack() {
+        
+        let summaryLabel = UILabel(frame: view.bounds)
+        summaryLabel.text = "Finish!"
+        summaryLabel.textAlignment = .center
+        summaryLabel.backgroundColor = UIColor.white
+        summaryLabel.font = UIFont.systemFont(ofSize: 24, weight: UIFontWeightBlack)
+        summaryLabel.clipsToBounds = true
+        summaryLabel.layer.cornerRadius = 16
+        view.addSubview(summaryLabel)
+        
         print("Reached end of stack")
     }
 }
