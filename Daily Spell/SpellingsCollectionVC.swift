@@ -14,6 +14,8 @@ private let reuseIdentifier = "SpellMenuCell"
 class SpellingsCollectionVC: UICollectionViewController {
     
     var words = Spellings()
+    private let file = "privacy-policy.txt"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,6 +27,7 @@ class SpellingsCollectionVC: UICollectionViewController {
     }
     
     func configureCollectionView () {
+        
         loadJSONFile()
         
         self.collectionView?.autoresizesSubviews            = true
@@ -47,6 +50,7 @@ class SpellingsCollectionVC: UICollectionViewController {
                     guard let jsonWithSpellings: JSONDictionary = jsonResult as? JSONDictionary else {return}
                     
                     self.words = Spellings(spells: jsonWithSpellings as NSDictionary)
+                    
                 } catch {
                     print("Some error at spellings JSONSerialization")
                 }
@@ -65,19 +69,17 @@ class SpellingsCollectionVC: UICollectionViewController {
         let aboutNav = UINavigationController()
         
         // Initialise the RFAboutView:
-        let aboutView = RFAboutViewController(copyrightHolderName: "Ashish Kapoor", contactEmail: "swiftobjc@gmail.com", contactEmailTitle: "Contact me", websiteURL: NSURL(string: "https://ashishkapoor.github.io")! as URL, websiteURLTitle: "Website")
+        let aboutView = RFAboutViewController(copyrightHolderName: "Ashish Kapoor", contactEmail: "swiftobjc@gmail.com", contactEmailTitle: "Contact me", websiteURL: NSURL(string: "https://ashishkapoor.github.io")! as URL, websiteURLTitle: "Developer's Website")
         
         // Set some additional options:
         aboutView.headerBackgroundColor = .black
         aboutView.headerTextColor = .white
         aboutView.blurStyle = .dark
-        //        aboutView.headerBackgroundImage = UIImage(named: "about_header_bg.jpg")
-        
-        // Add an additional button:
-        aboutView.addAdditionalButton("Privacy Policy", content: "Here's the privacy policy")
+        aboutView.headerBackgroundImage = UIImage(named: "blur.png")
         
         // Add an acknowledgement:
-        aboutView.addAcknowledgement("An awesome library", content: "License information for the awesome library")
+        aboutView.addAcknowledgement("DMSwipeCards", content: DMSwipeCardsCopyright)
+        aboutView.addAcknowledgement("RFAboutView", content: RFAboutViewCopyright)
         
         // Add the aboutView to the NavigationController:
         aboutNav.setViewControllers([aboutView], animated: false)

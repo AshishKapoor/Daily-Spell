@@ -86,7 +86,7 @@ class SpellingsVC: UIViewController {
     }
     
     func buttonTapped() {
-        swipeView.addCards(["\(self.summaryDetail!)", "\(self.meaningDetail!)", "\(self.imageURLDetail!)"])
+        swipeView.addCards(["\(self.summaryDetail!)", "\(self.meaningDetail!)"])
     }
     
 }
@@ -114,6 +114,7 @@ extension SpellingsVC: DMSwipeCardsViewDelegate {
         summaryLabel.clipsToBounds = true
         summaryLabel.layer.cornerRadius = 16
         view.addSubview(summaryLabel)
+        view.backgroundColor = UIColor.black
         
         print("Reached end of stack")
     }

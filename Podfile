@@ -8,4 +8,5 @@ target 'Daily Spell' do
   # Pods for Daily Spell
   pod 'DMSwipeCards'
   pod 'RFAboutView-Swift', '~> 2.0.1'
+  
 end
