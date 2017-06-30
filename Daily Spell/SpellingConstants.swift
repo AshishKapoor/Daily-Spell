@@ -12,7 +12,12 @@ typealias JSON = AnyObject
 typealias JSONDictionary = Dictionary<String, JSON>
 typealias JSONArray = Array<JSON>
 
+let oxfordAppId     = "b08e84ca"
+let oxfordAppKey    = "d904c1b36c41698a0f5d73bad426f726"
+let oxfordBaseUrl   = "https://od-api.oxforddictionaries.com:443/api/v1/"
+let oxfordLanguage  = "en"
 
+// Copyright stuff
 let RFAboutViewCopyright =
     "Copyright (c) 2016 René Fouquet <mail@fouquet.me>" +
     "\n\n" +

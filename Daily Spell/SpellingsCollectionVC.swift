@@ -18,7 +18,7 @@ class SpellingsCollectionVC: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.view.backgroundColor = UIColor(white: 0.95, alpha: 1.0)
         
         self.navigationController?.navigationBar.topItem?.title = "Daily Spell"
@@ -29,6 +29,8 @@ class SpellingsCollectionVC: UICollectionViewController {
     func configureCollectionView () {
         
         loadJSONFile()
+        
+        loadOxfordData()
         
         self.collectionView?.autoresizesSubviews            = true
         self.collectionView?.showsVerticalScrollIndicator   = false
@@ -48,9 +50,7 @@ class SpellingsCollectionVC: UICollectionViewController {
                 do {
                     let jsonResult: NSDictionary = try JSONSerialization.jsonObject(with: jsonData as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
                     guard let jsonWithSpellings: JSONDictionary = jsonResult as? JSONDictionary else {return}
-                    
                     self.words = Spellings(spells: jsonWithSpellings as NSDictionary)
-                    
                 } catch {
                     print("Some error at spellings JSONSerialization")
                 }
@@ -58,6 +58,24 @@ class SpellingsCollectionVC: UICollectionViewController {
                 print("Some error at spellings.json")
             }
         }
+    }
+    
+    func loadOxfordData() {
+        
+        let word = "Ace" // TODO:- Should come from view
+        let word_id = word.lowercased() //word id is case sensitive and lowercase is required
+        
+        let url = URL(string: "\(oxfordBaseUrl)entries/\(oxfordLanguage)/\(word_id)")!
+        let session = URLSession.shared
+        
+        _ = session.dataTask(with: URL.requestHeader(url: url), completionHandler: { data, response, error in
+            if let data = data, let jsonData = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) {
+                print(jsonData)
+                
+            } else {
+                print(NSString.init(data: data!, encoding: String.Encoding.utf8.rawValue) ?? "")
+            }
+        }).resume()
     }
     
     @IBAction func contactUsButtonPress(_ sender: Any) {

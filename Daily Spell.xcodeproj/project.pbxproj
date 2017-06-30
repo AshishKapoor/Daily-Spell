@@ -11,6 +11,7 @@
 		894969E61EEA637300D19112 /* SpellingsCollectionVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894969E51EEA637300D19112 /* SpellingsCollectionVCell.swift */; };
 		894969EF1EEA7CB100D19112 /* SpellingsLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894969EE1EEA7CB100D19112 /* SpellingsLevel.swift */; };
 		894969F11EEA7D6000D19112 /* SpellingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894969F01EEA7D6000D19112 /* SpellingConstants.swift */; };
+		8969B3111F04CE8F00EBACA5 /* DSExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8969B3101F04CE8F00EBACA5 /* DSExtensions.swift */; };
 		E3BFE5911EE840F9006801AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BFE5901EE840F9006801AD /* AppDelegate.swift */; };
 		E3BFE5931EE840F9006801AD /* SpellingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BFE5921EE840F9006801AD /* SpellingsVC.swift */; };
 		E3BFE5961EE840F9006801AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3BFE5941EE840F9006801AD /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		894969E51EEA637300D19112 /* SpellingsCollectionVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpellingsCollectionVCell.swift; sourceTree = "<group>"; };
 		894969EE1EEA7CB100D19112 /* SpellingsLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpellingsLevel.swift; sourceTree = "<group>"; };
 		894969F01EEA7D6000D19112 /* SpellingConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpellingConstants.swift; sourceTree = "<group>"; };
+		8969B3101F04CE8F00EBACA5 /* DSExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSExtensions.swift; sourceTree = "<group>"; };
 		96BBF89A25566F48FE6D843E /* Pods_Daily_Spell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Daily_Spell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE229DCFA631659E2C131F6D /* Pods-Daily Spell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Spell.release.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Spell/Pods-Daily Spell.release.xcconfig"; sourceTree = "<group>"; };
 		E3BFE58D1EE840F9006801AD /* Daily Spell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Spell.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +113,7 @@
 			children = (
 				E3BFE5901EE840F9006801AD /* AppDelegate.swift */,
 				894969F01EEA7D6000D19112 /* SpellingConstants.swift */,
+				8969B3101F04CE8F00EBACA5 /* DSExtensions.swift */,
 				E3BFE5941EE840F9006801AD /* Main.storyboard */,
 				894969E71EEA63A500D19112 /* Spellings */,
 				894969E81EEA63B100D19112 /* Menu */,
@@ -252,6 +255,7 @@
 				E3BFE5A51EE84E04006801AD /* Spellings.swift in Sources */,
 				894969EF1EEA7CB100D19112 /* SpellingsLevel.swift in Sources */,
 				E3BFE5931EE840F9006801AD /* SpellingsVC.swift in Sources */,
+				8969B3111F04CE8F00EBACA5 /* DSExtensions.swift in Sources */,
 				894969E61EEA637300D19112 /* SpellingsCollectionVCell.swift in Sources */,
 				894969F11EEA7D6000D19112 /* SpellingConstants.swift in Sources */,
 				E3BFE5911EE840F9006801AD /* AppDelegate.swift in Sources */,
